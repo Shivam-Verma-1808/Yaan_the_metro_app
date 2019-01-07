@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary"> #f7dc6f</color>
+    <color name="colorPrimaryDark"> #f7dc6f  </color>
+    <color name="colorAccent">#f1948a</color>
+
+
+    <color name="first_layer_start_color">@color/colorPrimaryDark</color>
+    <color name="first_layer_end_color">@color/colorAccent</color>
+
+
+    <color name="second_layer_start_color">@color/colorPrimaryDark</color>
+    <color name="second_layer_end_color">@color/colorAccent</color>
+
+
+    <color name="third_layer_start_color">@color/colorPrimaryDark</color>
+    <color name="third_layer_end_color">@color/colorAccent</color>
+
+</resources>
