@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".log_in_btn_area_fragment"
+    android:id="@+id/button_area_fragment"
+    app:layout_constraintBottom_toTopOf="@id/logo_log_in_2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/log_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Already have an Account ? Sign In"
+        />
+
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/log_in"
+        android:text="New to the App ? Create an Account"
+        />
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skip Sign In"
+        android:layout_below="@id/sign_up" />
+
+</RelativeLayout>
