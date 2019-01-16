@@ -26,4 +26,16 @@
     <string name="set_password_confirmation_textbox">Re_Enter Your Password</string>
 
 
+    <!-- For Navigation Drawer -->
+                                                                                                    <!--For Drawer Menu-->
+    <string name="navigation_drawer_1">Route Between Stations</string>
+    <string name="navigation_drawer_2">Station Info</string>
+    <string name="navigation_drawer_3">Metro Map</string>
+    <string name="navigation_drawer_4">City Attractions</string>
+    <string name="my_account">My Account</string>
+    <string name="log_out">Log Out</string>
+                                                                                                    <!--For ActionBarDrawerToogle / animation of hamberger icon for navigation drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>

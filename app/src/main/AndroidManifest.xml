@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".log_in_Activity_2" />
-        <activity android:name=".play_area"></activity>
+        <activity android:name=".play_area"
+            android:theme="@style/AppTheme.transparentStatusBar"></activity>
     </application>
 
 </manifest>
