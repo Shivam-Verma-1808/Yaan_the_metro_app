@@ -19,4 +19,6 @@
     <color name="third_layer_start_color">@color/colorPrimaryDark</color>
     <color name="third_layer_end_color">@color/colorAccent</color>
 
+    <color name="custom_btn_color">#c1c1c1</color>
+
 </resources>

@@ -3,4 +3,27 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_content_Description_1">Logo Image Appearing with background animation</string>
+    <string name="logo_content_Description">LOGO Image Floating up</string>
+
+
+
+    <!-- Log_in fragment Strings -->
+
+    <string name="Email_textbox">Email</string>
+    <string name="password_textbox">Password</string>
+    <string name="final_Log_in_btn">Log_in</string>
+
+
+    <!-- Sign_up fragment Strings -->
+
+    <string name="First_name">First Name</string>
+    <string name="Last_name">Last Name</string>
+    <string name="final_sign_up_btn">Sign_Up</string>
+    <string name="Phone_textbox">Phone</string>
+    <string name="set_password_textbox">Set Your Password</string>
+    <string name="password_confirmation_textbox">Confirmation</string>
+    <string name="set_password_confirmation_textbox">Re_Enter Your Password</string>
+
+
 </resources>

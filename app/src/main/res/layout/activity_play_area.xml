@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".play_area">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/entire_play_area"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/play_area_top_fragment"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/play_area_middle_fragment"
+            android:orientation="vertical"
+            ></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:id="@+id/play_area_bottom_fragment"
+            android:orientation="vertical"
+            android:background="@color/colorAccent"
+            ></LinearLayout>
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
