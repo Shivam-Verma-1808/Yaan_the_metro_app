@@ -21,4 +21,13 @@
 
     <color name="custom_btn_color">#c1c1c1</color>
 
+    <!--for toolbars-->
+    <color name="toolbar_color">#F44336</color>
+
+
+    <!--for tabLayout middle fragment play_area -->
+    <color name="tab1_middle_fragment_color">#009688</color>
+    <color name="tab2_middle_fragment_color">#FFEB3B</color>
+    <color name="tab3_middle_fragment_color">#FF5722</color>
+
 </resources>

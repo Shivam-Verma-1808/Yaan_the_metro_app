@@ -118,9 +118,10 @@ public class play_area extends AppCompatActivity implements NavigationView.OnNav
 
     public void setPlayAreaAsNew()
     {
-        android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.play_area_top_fragment, new play_area_top_fragment());
-        transaction.commit();
+        android.support.v4.app.FragmentTransaction transaction;
+        //android.support.v4.app.FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        //transaction.replace(R.id.play_area_top_fragment, new play_area_top_fragment());
+        //transaction.commit();
 
 
         transaction = getSupportFragmentManager().beginTransaction();

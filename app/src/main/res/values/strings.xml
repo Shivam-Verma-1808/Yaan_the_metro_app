@@ -7,7 +7,6 @@
     <string name="logo_content_Description">LOGO Image Floating up</string>
 
 
-
     <!-- Log_in fragment Strings -->
 
     <string name="Email_textbox">Email</string>
@@ -27,15 +26,20 @@
 
 
     <!-- For Navigation Drawer -->
-                                                                                                    <!--For Drawer Menu-->
+    <!--For Drawer Menu-->
     <string name="navigation_drawer_1">Route Between Stations</string>
     <string name="navigation_drawer_2">Station Info</string>
     <string name="navigation_drawer_3">Metro Map</string>
     <string name="navigation_drawer_4">City Attractions</string>
     <string name="my_account">My Account</string>
     <string name="log_out">Log Out</string>
-                                                                                                    <!--For ActionBarDrawerToogle / animation of hamberger icon for navigation drawer-->
+    <!--For ActionBarDrawerToogle / animation of hamberger icon for navigation drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- For Pager Adapter -->
+    <string name="tab1">tab1</string>
+    <string name="tab2">tab2</string>
+    <string name="tab3">tab3</string>
 
 </resources>
