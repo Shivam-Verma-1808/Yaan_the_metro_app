@@ -1,5 +1,7 @@
 package com.example.root.myapplication;
 
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -43,13 +45,28 @@ public class play_area_middle_fragment extends Fragment {
                 switch (tab.getPosition())
                 {
                     case 0:
-                        tabLayout.setBackgroundColor(ContextCompat.getColor(rootView.getContext(),R.color.tab1_middle_fragment_color));
+
+                        tabLayout.setBackgroundColor(ContextCompat.getColor(rootView.getContext(),R.color.tab1_middle_fragment_color)); //for coloring TabLayout of this fragment
+                        //getActivity().getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.tab1_middle_fragment_color))); //for coloring the toolbar //this makes the app crash
+                        //if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {                                                     //for coloring statusBar of the device ,this feature is available only for Lollipop or higher
+                          //   getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(rootView.getContext(), R.color.tab1_middle_fragment_color));
+                        //}
+
                     break;
                     case 1:
                         tabLayout.setBackgroundColor(ContextCompat.getColor(rootView.getContext(),R.color.tab2_middle_fragment_color));
+                        //getActivity().getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.tab2_middle_fragment_color)));
+                        //if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                          //  getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(rootView.getContext(), R.color.tab2_middle_fragment_color));
+                        //}
+
                     break;
                     case 2:
                         tabLayout.setBackgroundColor(ContextCompat.getColor(rootView.getContext(),R.color.tab3_middle_fragment_color));
+                        //getActivity().getActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.tab3_middle_fragment_color)));
+                        //if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                          //  getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(rootView.getContext(), R.color.tab3_middle_fragment_color));
+                        //}
                     break;
                 }
             }
