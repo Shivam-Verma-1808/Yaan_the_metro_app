@@ -67,7 +67,7 @@
             android:layout_weight="5"
             android:id="@+id/play_area_bottom_fragment"
             android:orientation="vertical"
-            android:background="@color/colorAccent"
+            android:background="@color/play_area_bottom_fragment_default_color"
             ></LinearLayout>
     </LinearLayout>
 

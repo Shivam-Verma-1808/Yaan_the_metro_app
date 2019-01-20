@@ -7,7 +7,7 @@
     <color name="fragment_background">#33FFFFFF</color>
 
 
-
+    <!-- For Animation Layers -->
     <color name="first_layer_start_color">@color/colorPrimaryDark</color>
     <color name="first_layer_end_color">@color/colorAccent</color>
 
@@ -20,6 +20,9 @@
     <color name="third_layer_end_color">@color/colorAccent</color>
 
     <color name="custom_btn_color">#c1c1c1</color>
+
+    <!--For Play_Area -->
+    <color name="play_area_bottom_fragment_default_color">#FFFFFF</color>
 
     <!--for toolbars-->
     <color name="toolbar_color">#F44336</color>

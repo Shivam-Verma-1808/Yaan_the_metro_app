@@ -42,4 +42,18 @@
     <string name="tab2">tab2</string>
     <string name="tab3">tab3</string>
 
+    <!-- For play_area_bottom_fragment -->
+    <!--Explore area-->
+    <string name="bottom_fragment_btn1">Know Your Metro</string>
+    <string name="bottom_fragment_btn2">Map</string>
+    <string name="bottom_fragment_btn3">City Attractions</string>
+    <!--Fare Area-->
+    <string name="bottom_fragment_btn4">Quick Recharge</string>
+    <string name="bottom_fragment_btn5">App Wallet</string>
+    <string name="bottom_fragment_btn6">Smart Card</string>
+    <!--info sextion-->
+    <string name="bottom_fragment_btn7">FAQ</string>
+    <string name="bottom_fragment_btn8">Help Line</string>
+    <string name="bottom_fragment_btn9">FeedBack</string>
+
 </resources>
