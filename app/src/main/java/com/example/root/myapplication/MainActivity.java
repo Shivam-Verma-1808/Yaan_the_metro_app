@@ -2,6 +2,7 @@ package com.example.root.myapplication;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Handler;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         long fadein_duration = 5000;
 
@@ -49,7 +51,14 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {                                                  //this portion is for time based switch to new activity
             @Override
             public void run() {
-                startActivity(new Intent(MainActivity.this,log_in_Activity_2.class));
+                //if(session.get_signed_in_status(mContext))
+                //{
+                    startActivity(new Intent(MainActivity.this, log_in_Activity_2.class));
+                //}
+                //else
+                //{
+                  //  startActivity(new Intent(MainActivity.this,play_area.class));
+                //}
                 finish();
             }
         },time_out);
