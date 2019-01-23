@@ -51,9 +51,14 @@
     <string name="bottom_fragment_btn4">Quick Recharge</string>
     <string name="bottom_fragment_btn5">App Wallet</string>
     <string name="bottom_fragment_btn6">Smart Card</string>
-    <!--info sextion-->
+    <!--info section-->
     <string name="bottom_fragment_btn7">FAQ</string>
     <string name="bottom_fragment_btn8">Help Line</string>
     <string name="bottom_fragment_btn9">FeedBack</string>
+
+
+    <!--for sessions-->
+    <string name="logged_in_message">Logged In</string>
+    <string name="log_out_string">Logging Out</string>
 
 </resources>

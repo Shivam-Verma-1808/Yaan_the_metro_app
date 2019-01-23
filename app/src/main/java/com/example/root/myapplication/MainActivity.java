@@ -20,10 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
     private static int time_out = 4000;
 
+    Context mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mContext = this;
 
 
         long fadein_duration = 5000;
@@ -51,15 +54,17 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {                                                  //this portion is for time based switch to new activity
             @Override
             public void run() {
-                //if(session.get_signed_in_status(mContext))
-                //{
-                    startActivity(new Intent(MainActivity.this, log_in_Activity_2.class));
-                //}
-                //else
-                //{
-                  //  startActivity(new Intent(MainActivity.this,play_area.class));
-                //}
-                finish();
+                if(session.get_signed_in_status(mContext))
+                {
+                    startActivity(new Intent(MainActivity.this,play_area.class ));
+                    finish();
+                }
+                else
+                {
+                    startActivity(new Intent(MainActivity.this,log_in_Activity_2.class));
+                    finish();
+                }
+
             }
         },time_out);
 

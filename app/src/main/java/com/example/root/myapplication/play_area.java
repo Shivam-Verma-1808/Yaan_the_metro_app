@@ -1,6 +1,8 @@
 package com.example.root.myapplication;
 
 import android.app.FragmentTransaction;
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,16 +15,20 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class play_area extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawer;
+    ImageButton log_out;
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_area);
+        mContext = this ;
 
         if(savedInstanceState == null)
         {
@@ -52,6 +58,18 @@ public class play_area extends AppCompatActivity implements NavigationView.OnNav
             public void onClick(View v) {
                 setPlayAreaAsNew();
                 navigationView.setCheckedItem(R.id.navigation_drawer_option_0);
+            }
+        });
+
+        log_out = findViewById(R.id.log_out_btn);
+        log_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //session.deleteData(mContext);
+                //Toast.makeText(getApplicationContext(),R.string.log_out_string,Toast.LENGTH_LONG).show();
+                //startActivity(new Intent(play_area.this,log_in_Activity_2.class));
+                //finish();
+                log_out_function();
             }
         });
 
@@ -93,8 +111,8 @@ public class play_area extends AppCompatActivity implements NavigationView.OnNav
             break;
 
             case R.id.other_options_2:
-                Toast.makeText(this,"log_out Need to be completed ,i.e,shared prefereece file to be deleted",Toast.LENGTH_LONG).show();
-
+                //Toast.makeText(this,"log_out Need to be completed ,i.e,shared prefereece file to be deleted",Toast.LENGTH_LONG).show();
+                log_out_function();
             break;
         }
 
@@ -114,6 +132,14 @@ public class play_area extends AppCompatActivity implements NavigationView.OnNav
         {
             super.onBackPressed();
         }
+    }
+
+    public void log_out_function()
+    {
+        session.deleteData(mContext);
+        Toast.makeText(getApplicationContext(),R.string.log_out_string,Toast.LENGTH_LONG).show();
+        startActivity(new Intent(play_area.this,log_in_Activity_2.class));
+        finish();
     }
 
     public void setPlayAreaAsNew()

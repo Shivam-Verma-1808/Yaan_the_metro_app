@@ -26,7 +26,7 @@ public class log_in_fragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.log_in_fragment,container,false);
-        mContext = rootView.getContext();
+        mContext = rootView.getContext();                                                           //mContext = getApplicationContext();
 
         user_name = rootView.findViewById(R.id.user_name);
         password = rootView.findViewById(R.id.user_password);
@@ -39,7 +39,7 @@ public class log_in_fragment extends Fragment {
                 //validate user credentials
                 //if(valid)
                 session.saveData(mContext);
-                Toast.makeText(rootView.getContext(),"Loged In",Toast.LENGTH_LONG).show();
+                Toast.makeText(rootView.getContext(),R.string.logged_in_message,Toast.LENGTH_LONG).show();
                 startActivity(new Intent(getActivity(),play_area.class));                           //to change to play_area activity
                 getActivity().finish();
                 //else
