@@ -10,9 +10,17 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello_tab3_fragment"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Need to be completed"
         android:textSize="40sp"
-        android:layout_gravity="center_horizontal|center_vertical"/>
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Credits: Shivam Verma"
+        android:textSize="40sp"
+        android:gravity="center"/>
 
 </LinearLayout>

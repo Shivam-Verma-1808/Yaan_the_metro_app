@@ -61,4 +61,31 @@
     <string name="logged_in_message">Logged In</string>
     <string name="log_out_string">Logging Out</string>
 
+
+    <!--for search_bar_popup_menu-->
+    <string name="popup_1">popup_1</string>
+    <string name="popup_2">popup_2</string>
+    <string name="popup_3">popup_3</string>
+    <string name="popup_4">popup_4</string>
+    <string name="popup_5">popup_5</string>
+    <string name="popup_6">popup_6</string>
+    <string name="popup_7">popup_7</string>
+    <string name="popup_8">popup_8</string>
+    <string name="popup_9">popup_9</string>
+    <string name="popup_10">popup_10</string>
+    <string name="popup_11">popup_11</string>
+    <string name="popup_12">popup_12</string>
+
+    <!-- for Tab_1_middle_fragment_play_area -->
+    <string name="tab1_middle_fragment_get_info_btn">Get Info</string>
+    <string name="tab1_middle_fragment_view_route">View Route</string>
+    <!--for search_bar_tab_1-->
+    <string name="search_bar_1">search_bar_1</string>
+    <string name="search_bar_2">search_bar_2</string>
+    <!-- for Tab_2_middle_fragment_play_area -->
+    <string name="tab_2_hint">Choose A Station to know more</string>
+    <string name="tab2_middle_fragment_get_station_info">Get Station Info</string>
+    <!--for search_bar_tab_2-->
+    <string name="search_bar_tab_2">Select Station</string>
+
 </resources>
