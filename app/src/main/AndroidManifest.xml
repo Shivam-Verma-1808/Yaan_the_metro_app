@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_1_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".feed_back_activity"></activity>
+        <activity android:name=".help_line_activity" />
+        <activity android:name=".FAQ_activity" />
+        <activity android:name=".go_smart_card" />
+        <activity android:name=".app_wallet" />
+        <activity android:name=".quick_recharge" />
+        <activity android:name=".city_attractions" />
+        <activity android:name=".metro_map" />
+        <activity android:name=".know_your_metro" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +26,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".log_in_Activity_2" />
-        <activity android:name=".play_area"
-            android:theme="@style/AppTheme.transparentStatusBar"></activity>
+        <activity
+            android:name=".play_area"
+            android:theme="@style/AppTheme.transparentStatusBar" />
     </application>
 
 </manifest>

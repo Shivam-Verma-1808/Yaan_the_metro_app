@@ -25,7 +25,8 @@
     <color name="play_area_bottom_fragment_default_color">#FFFFFF</color>
 
     <!--for toolbars-->
-    <color name="toolbar_color">#F44336</color>
+    <color name="play_area_toolbar_color">#F44336</color>
+    <color name="other_toolbar_color">@color/colorPrimaryDark</color>
 
 
     <!--for tabLayout middle fragment play_area -->

@@ -88,4 +88,9 @@
     <!--for search_bar_tab_2-->
     <string name="search_bar_tab_2">Select Station</string>
 
+
+
+    <!--For Other Toolbar-->
+    <string name="other_toolbar_Back_Button">Back Button</string>
+
 </resources>

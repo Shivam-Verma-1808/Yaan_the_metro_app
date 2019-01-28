@@ -94,10 +94,12 @@ public class play_area extends AppCompatActivity implements NavigationView.OnNav
             break;
 
             case R.id.navigation_drawer_option_3:
+                startActivity(new Intent(play_area.this,metro_map.class));
                 Toast.makeText(this,"Metro Map",Toast.LENGTH_LONG).show();
             break;
 
             case R.id.navigation_drawer_option_4:
+                startActivity(new Intent(play_area.this,city_attractions.class));
                 Toast.makeText(this,"City Attractions",Toast.LENGTH_LONG).show();
                 break;
 

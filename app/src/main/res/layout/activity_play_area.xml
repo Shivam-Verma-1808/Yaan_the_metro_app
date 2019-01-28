@@ -22,7 +22,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp"
-            android:background="#F44336"
+            android:background="@color/play_area_toolbar_color"
             >
             <LinearLayout
                 android:layout_width="match_parent"
