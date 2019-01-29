@@ -215,13 +215,14 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
 
     public void replaceViewbyFragment(Fragment someFragment)
     {
-
+        /*
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         //transaction.replace(R.id.buttons, someFragment);
         transaction.replace(R.id.play_area_bottom_fragment, someFragment);
         transaction.addToBackStack(null);
         transaction.commit();
-
+        */
+        //play_area_middle_fragment.fragmentManager.beginTransaction().replace(R.id.play_area_bottom_fragment,someFragment).addToBackStack(null).commit();
     }
 }
 

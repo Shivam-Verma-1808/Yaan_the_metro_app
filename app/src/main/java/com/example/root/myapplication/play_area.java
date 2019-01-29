@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -24,11 +25,14 @@ public class play_area extends AppCompatActivity implements NavigationView.OnNav
     ImageButton log_out;
     Context mContext;
 
+    //public static FragmentManager fragmentManager ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_area);
         mContext = this ;
+        //fragmentManager = getSupportFragmentManager();                                              //for acessing frangment manager form other classes
 
         if(savedInstanceState == null)
         {

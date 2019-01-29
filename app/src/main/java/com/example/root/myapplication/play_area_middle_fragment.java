@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -23,10 +24,14 @@ public class play_area_middle_fragment extends Fragment {
     TabLayout tabLayout;
     TabItem tab1,tab2,tab3;
 
+    //public static FragmentManager fragmentManager ;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_play_area_middle_fragment, container, false);
+
+        //fragmentManager = getFragmentManager();                                                     //for acessing frangment manager form other classes
 
         viewPager = rootView.findViewById(R.id.view_pager);
         tabLayout = rootView.findViewById(R.id.tablayout);
