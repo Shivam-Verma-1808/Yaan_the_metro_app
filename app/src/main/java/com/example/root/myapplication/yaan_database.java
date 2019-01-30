@@ -49,19 +49,19 @@ public abstract class yaan_database extends RoomDatabase {
         @Override
         protected Void doInBackground(Void... voids) {
 
-            stationdao.insert_new_station(new station_entity("Asia",3,"Asia on Earth",10,true,1,3,"asia@earth_mail.com",new Time(06,00,00),new Time(23,00,00),new Date(2019,01,07),1, "parking_alt:INDIAN OCEAN", true, 5, 1234567890, 987654321));
+            stationdao.insert_new_station(new station_entity("Asia",3,"Asia on Earth",10,true,1,3,"asia@earth_mail.com",/*new Time(06,00,00),new Time(23,00,00),new Date(2019,01,07),*/1, "parking_alt:INDIAN OCEAN", true, 5, 1234567890, 987654321));
 
-            stationdao.insert_new_station(new station_entity("Africa",2,"Africa on Earth",20,false,2,5,"africa@earth_mail.com",new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),1, "parking_alt:Atlantic Ocean", true, 4, 234567890, 876543210));
+            stationdao.insert_new_station(new station_entity("Africa",2,"Africa on Earth",20,false,2,5,"africa@earth_mail.com",/*new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),*/1, "parking_alt:Atlantic Ocean", true, 4, 234567890, 876543210));
 
-            stationdao.insert_new_station(new station_entity("Antarctica",1,"South pole ,Earth",30,false,1,6,"antarctica_south_pole@earth_mail.com",new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),1, "parking_alt:Southern OCEAN", true, 5, 345678902, 765432108));
+            stationdao.insert_new_station(new station_entity("Antarctica",1,"South pole ,Earth",30,false,1,6,"antarctica_south_pole@earth_mail.com",/*new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),*/1, "parking_alt:Southern OCEAN", true, 5, 345678902, 765432108));
 
-            stationdao.insert_new_station(new station_entity("Australia",1,"Kangaroo Park,Australia ,Earth",40,false,2,5,"australia@earth_mail.com",new Time(06,00,00),new Time(23,00,00),new Date(2019,01,07),1, "parking_alt:Pacific Ocean", true, 5, 456789012, 654321543));
+            stationdao.insert_new_station(new station_entity("Australia",1,"Kangaroo Park,Australia ,Earth",40,false,2,5,"australia@earth_mail.com",/*new Time(06,00,00),new Time(23,00,00),new Date(2019,01,07),*/1, "parking_alt:Pacific Ocean", true, 5, 456789012, 654321543));
 
-            stationdao.insert_new_station(new station_entity("Europe",3,"Europe ,Earth",50,true,3,3,"eu@earth_mail.com",new Time(06,00,00),new Time(23,00,00),new Date(2019,01,07),1, "parking_alt:Arctic Ocean", true, 5, 567890432, 54321032));
+            stationdao.insert_new_station(new station_entity("Europe",3,"Europe ,Earth",50,true,3,3,"eu@earth_mail.com",/*new Time(06,00,00),new Time(23,00,00),new Date(2019,01,07),*/1, "parking_alt:Arctic Ocean", true, 5, 567890432, 54321032));
 
-            stationdao.insert_new_station(new station_entity("North America",1,"UN Garden ,North America ,Earth",60,false,1,5,"n_america@earth_mail.com",new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),1, "parking_alt:Gulf of Mexico", true, 5, 678901234, 432109876));
+            stationdao.insert_new_station(new station_entity("North America",1,"UN Garden ,North America ,Earth",60,false,1,5,"n_america@earth_mail.com",/*new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),*/1, "parking_alt:Gulf of Mexico", true, 5, 678901234, 432109876));
 
-            stationdao.insert_new_station(new station_entity("South America",1,"Aconcagua,Andes mountain range,South America ,Earth",70,false,1,5,"s_america@earth_mail.com",new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),1, "parking_alt:Caribbean Sea", true, 5, 789012345, 321987654));
+            stationdao.insert_new_station(new station_entity("South America",1,"Aconcagua,Andes mountain range,South America ,Earth",70,false,1,5,"s_america@earth_mail.com",/*new Time(06,30,00),new Time(23,30,00),new Date(2019,01,07),*/1, "parking_alt:Caribbean Sea", true, 5, 789012345, 321987654));
 
             return null;
         }

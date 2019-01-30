@@ -34,6 +34,8 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
 
     private yaanViewModel yaan_view_model;
 
+    List<String> station_names;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -95,6 +97,7 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
             public void onChanged(@Nullable List<String> strings) {
                 //
                 Toast.makeText(getActivity(),"OnChanged",Toast.LENGTH_LONG).show();
+                station_names = strings;
             }
         });
 
@@ -192,8 +195,11 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
             popupMenu = new PopupMenu(getActivity(),search_bar_2);
         }
 
-        popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
-
+        for(String station : station_names) {
+            popupMenu.getMenu().add(R.id.all_stations,R.id.popup_1,0,station);
+        }
+        //popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
+        popupMenu.show();
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -202,10 +208,12 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
                 {
 
                     search_bar_1_textbox.setText(item.getTitle());
+                    Toast.makeText(rootView.getContext(), Integer.toString(item.getItemId()),Toast.LENGTH_SHORT).show();
                 }
                 else if(view.getId()==R.id.search_bar_2)
                 {
                     search_bar_2_textbox.setText(item.getTitle());
+                    Toast.makeText(rootView.getContext(),Integer.toString(item.getItemId()),Toast.LENGTH_SHORT).show();
                 }
 
                 //Toast.makeText(rootView.getContext(),item.getTitle(),Toast.LENGTH_LONG).show();

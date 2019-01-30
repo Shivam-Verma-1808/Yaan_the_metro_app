@@ -28,9 +28,9 @@ public class station_entity {
 
     private String email;
 
-    private Time timein;
-    private Time timeout;
-    private Date datein;
+   // private Time timein;
+   // private Time timeout;
+   // private Date datein;
 
     private int parking;
     private String parking_alt;
@@ -41,7 +41,7 @@ public class station_entity {
     private int contact_1;
     private int contact_2;
 
-    public station_entity(String name, int platforms, String address, int pincode, boolean jnc, int type, int wait, String email, Time timein, Time timeout, Date datein, int parking, String parking_alt, boolean lift, int rating, int contact_1, int contact_2) {
+    public station_entity(String name, int platforms, String address, int pincode, boolean jnc, int type, int wait, String email, /*Time timein, Time timeout, Date datein,*/ int parking, String parking_alt, boolean lift, int rating, int contact_1, int contact_2) {
         this.name = name;
         this.platforms = platforms;
         this.address = address;
@@ -50,9 +50,9 @@ public class station_entity {
         this.type = type;
         this.wait = wait;
         this.email = email;
-        this.timein = timein;
-        this.timeout = timeout;
-        this.datein = datein;
+        //this.timein = timein;
+        //this.timeout = timeout;
+        //this.datein = datein;
         this.parking = parking;
         this.parking_alt = parking_alt;
         this.lift = lift;
@@ -100,7 +100,7 @@ public class station_entity {
     public String getEmail() {
         return email;
     }
-
+/*
     public Time getTimein() {
         return timein;
     }
@@ -112,7 +112,7 @@ public class station_entity {
     public Date getDatein() {
         return datein;
     }
-
+*/
     public int getParking() {
         return parking;
     }

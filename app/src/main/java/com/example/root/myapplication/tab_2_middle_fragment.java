@@ -1,8 +1,11 @@
 package com.example.root.myapplication;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -14,6 +17,8 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 
 public class tab_2_middle_fragment extends Fragment implements View.OnClickListener{
 
@@ -21,6 +26,9 @@ public class tab_2_middle_fragment extends Fragment implements View.OnClickListe
     TextView search_bar_tab_2_textbox;
     LinearLayout search_bar_tab_2;
     Button get_station_info;
+
+    private yaanViewModel yaan_view_model;
+    List<String> station_names;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +45,20 @@ public class tab_2_middle_fragment extends Fragment implements View.OnClickListe
                 //do things here on button click;
             }
         });
+
+
+        yaan_view_model = ViewModelProviders.of(getActivity()).get(yaanViewModel.class);
+
+        yaan_view_model.getAll_station_names().observe(getActivity(), new Observer<List<String>>() {
+            @Override
+            public void onChanged(@Nullable List<String> strings) {
+                //
+                Toast.makeText(getActivity(),"OnChanged_called_from_tab2",Toast.LENGTH_LONG).show();
+                station_names = strings;
+            }
+        });
+
+
         return rootView;
     }
 
@@ -45,7 +67,11 @@ public class tab_2_middle_fragment extends Fragment implements View.OnClickListe
 
         PopupMenu popupMenu ;
         popupMenu = new PopupMenu(getActivity(),search_bar_tab_2);
-        popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
+        for(String station : station_names) {
+            popupMenu.getMenu().add(R.id.all_stations,R.id.popup_1,0,station);
+        }
+        popupMenu.show();
+        //popupMenu.getMenuInflater().inflate(R.menu.popup_menu,popupMenu.getMenu());
 
         if (view.getId()==R.id.search_bar_tab_2)
         {
