@@ -1,6 +1,8 @@
 package com.example.root.myapplication;
 
 import android.app.Activity;
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
@@ -17,6 +19,8 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 
 public class tab_1_middle_fragment extends Fragment implements View.OnClickListener{
 
@@ -27,6 +31,8 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
 
     Fragment fragment = null ;
     //public FragmentCommunicator fragmentCommunicator;
+
+    private yaanViewModel yaan_view_model;
 
 
     @Override
@@ -78,6 +84,17 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
                 ////transaction.commit();
                 replaceViewbyFragment(fragment);
 
+            }
+        });
+
+
+        yaan_view_model = ViewModelProviders.of(getActivity()).get(yaanViewModel.class);
+
+        yaan_view_model.getAll_station_names().observe(getActivity(), new Observer<List<String>>() {
+            @Override
+            public void onChanged(@Nullable List<String> strings) {
+                //
+                Toast.makeText(getActivity(),"OnChanged",Toast.LENGTH_LONG).show();
             }
         });
 

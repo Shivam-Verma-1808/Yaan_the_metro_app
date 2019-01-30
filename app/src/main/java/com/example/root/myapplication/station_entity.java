@@ -61,6 +61,9 @@ public class station_entity {
         this.contact_2 = contact_2;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getId() {
         return id;
