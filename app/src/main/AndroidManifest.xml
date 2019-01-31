@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_1_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feed_back_activity"></activity>
+        <activity android:name=".station_info_activity"></activity>
+        <activity android:name=".feed_back_activity" />
         <activity android:name=".help_line_activity" />
         <activity android:name=".FAQ_activity" />
         <activity android:name=".go_smart_card" />

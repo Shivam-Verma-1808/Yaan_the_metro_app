@@ -89,8 +89,10 @@
     <string name="search_bar_tab_2">Select Station</string>
 
 
-
     <!--For Other Toolbar-->
     <string name="other_toolbar_Back_Button">Back Button</string>
+
+    <!--For Station Info Activity-->
+    <string name="station_info">Station Info</string>
 
 </resources>

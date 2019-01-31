@@ -3,6 +3,7 @@ package com.example.root.myapplication;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -30,6 +31,8 @@ public class tab_2_middle_fragment extends Fragment implements View.OnClickListe
     private yaanViewModel yaan_view_model;
     List<String> station_names;
 
+    String selected_station_name = null;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +46,7 @@ public class tab_2_middle_fragment extends Fragment implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 //do things here on button click;
+                startActivity((new Intent(getActivity(),station_info_activity.class)).putExtra("station_name",selected_station_name));
             }
         });
 
@@ -83,6 +87,7 @@ public class tab_2_middle_fragment extends Fragment implements View.OnClickListe
             public boolean onMenuItemClick(MenuItem item) {
 
                 search_bar_tab_2_textbox.setText(item.getTitle());
+                selected_station_name = (String) item.getTitle();
                 return true;
             }
         });
