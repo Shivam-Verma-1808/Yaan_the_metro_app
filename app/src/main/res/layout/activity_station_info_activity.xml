@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".station_info_activity"
-    android:orientation="vertical">
+
+    android:isScrollContainer="false"
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -16,6 +24,7 @@
         android:elevation="4dp"
         android:background="@color/other_toolbar_color"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,14 +51,334 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Please Select A staion First"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:id="@+id/messageTextBox"/>
 
-</LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Please Select A staion First"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:id="@+id/station_name"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7">
+
+            <TableRow>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:text="Station Type :"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/station_type"
+                />
+
+            </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Average Wait Time (min) :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/wait"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Number of Platforms :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/no_of_platforms"
+                />
+        </TableRow>
+
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Parking:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Y"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/parking"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Parking Alternative:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/parking_alt"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Lifts :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Y"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/lift"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Junction"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="N"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/jnc"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Rating:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/rating"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Contact 1:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:text="5022-1234"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/contact_1"
+                />
+
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Contact 2:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:text="1234567890"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/contact_2"
+                />
+
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Email:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:text="123@qwe.com"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/email"
+                />
+        </TableRow>
+
+
+        <TableRow
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="PinCode :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/pincode"
+                />
+        </TableRow>
+
+        <TableRow
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Address:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="15sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:text="Address"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:id="@+id/address"
+                />
+        </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="600dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="600dp" />
+            </TableRow>
+        </TableLayout>
+
+
+
+    </LinearLayout>
+
+    </ScrollView>

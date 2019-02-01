@@ -1,7 +1,10 @@
 package com.example.root.myapplication;
 
 import android.app.Application;
+import android.arch.core.util.Function;
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.Transformations;
 import android.os.AsyncTask;
 
 import java.util.List;
@@ -12,6 +15,7 @@ public class yaanRepository {                                                   
     private station_Dao station_dao;
     private LiveData<List<String>> all_station_names;
     private LiveData<station_entity> station_info;
+    MutableLiveData<String> filter = new MutableLiveData<String>();                                 //
 
     public yaanRepository(Application application)
     {
@@ -19,6 +23,19 @@ public class yaanRepository {                                                   
         station_dao = database.station_dao();
         all_station_names = station_dao.select_all_station_names();
         //station_info = station_dao.show_station(station_name);
+
+        station_info = Transformations.switchMap(filter, new Function<String,LiveData<station_entity>>(){       //
+            @Override
+            public LiveData<station_entity> apply(String input) {
+                return station_dao.show_station(input);
+            }
+        });
+
+    }
+
+    public void set_filter(String string)
+    {
+        filter.setValue(string);
     }
 
     public void insert_new_station(station_entity station)
@@ -31,7 +48,8 @@ public class yaanRepository {                                                   
     }
 
     public LiveData<station_entity> getStation_info(String station_name) {
-        station_info = station_dao.show_station(station_name);
+        //station_info = station_dao.show_station(station_name);
+        this.set_filter(station_name);
         return station_info;
     }
 
