@@ -12,6 +12,7 @@ public class station_entity {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
+    //@Unique
     private String name;
 
     private int platforms;
