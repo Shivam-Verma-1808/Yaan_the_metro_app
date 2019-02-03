@@ -8,15 +8,15 @@ import android.arch.persistence.room.PrimaryKey;
 public class route_cost_relation {
 
     @PrimaryKey(autoGenerate = true)
-    int route_id ;
+    private int route_id ;
 
     //@ForeignKey(syntax here)                                                                                 //foreign key references station_entity src_station_id = station_entity.id;
-    int src_station_id;
+    private int src_station_id;
 
     //@ForeignKey(syntax here)                                                                                 //foreign key references station_entity src_station_id = station_entity.id;
-    int dest_station_id;
+    private int dest_station_id;
 
-    float cost;
+    private float cost;
 
     public route_cost_relation(int src_station_id, int dest_station_id,float cost) {
         this.src_station_id = src_station_id;

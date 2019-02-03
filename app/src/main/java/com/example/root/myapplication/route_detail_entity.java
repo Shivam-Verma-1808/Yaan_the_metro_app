@@ -8,18 +8,18 @@ import android.arch.persistence.room.PrimaryKey;
 public class route_detail_entity {
 
     @PrimaryKey(autoGenerate = true)
-    int id;
+    private int id;
 
     //@ForeignKey(syntax)                                                                           //foreign key references route_cost_relation route_cost_relation.route_id =route_detail.route_id;
-    int route_id;
+    private int route_id;
 
     //@ForeignKey(syntax)                                                                           //foreign key references station_entity id =route_detail.between_station;
-    int between_station;
+    private int between_station;
 
-    int order;                                                                                      //order means this station appears first then other in between the src and dest stations;
+    private int order;                                                                                      //order means this station appears first then other in between the src and dest stations;
 
     //@ForeignKey(syntax)                                                                           //foreign key references color_entity color.id =route_detail.color;
-    int line_color;
+    private int line_color;
 
 
     public route_detail_entity(int route_id, int between_station, int order, int line_color) {
