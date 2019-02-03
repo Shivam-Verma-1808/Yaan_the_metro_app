@@ -3,7 +3,7 @@
     <color name="colorPrimary"> #f7dc6f</color>
     <color name="colorPrimaryDark"> #f7dc6f  </color>
     <color name="colorAccent">#f1948a</color>
-    <color name="launcher_1_background">#33FFFFFF</color>
+    <color name="launcher_1_background">#FFFFFF</color>
     <color name="fragment_background">#33FFFFFF</color>
 
 

@@ -58,32 +58,36 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="?android:attr/actionBarSize"
             android:text="Please Select A staion First"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="30sp"
             android:gravity="center"
-            android:id="@+id/station_name"/>
+            android:id="@+id/station_name"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="7">
 
-            <TableRow>
+            <TableRow
+                android:layout_marginBottom="15dp"
+                >
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:textSize="30sp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:text="Station Type :"
-                android:gravity="center"/>
+                android:gravity="start"
+                android:paddingStart="15dp"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -91,22 +95,27 @@
                 android:textSize="30sp"
                 android:gravity="center"
                 android:id="@+id/station_type"
+
                 />
 
             </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:text="Average Wait Time (min) :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:ellipsize="end"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -117,18 +126,21 @@
                 />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_weight="5"
                 android:layout_height="wrap_content"
                 android:text="Number of Platforms :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -141,18 +153,21 @@
 
 
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:text="Parking:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Y"
@@ -163,18 +178,21 @@
                 />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Parking Alternative:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textSize="15sp"
-                android:gravity="center"
+                android:textSize="25sp"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -185,18 +203,21 @@
                 />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:text="Lifts :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="Y"
@@ -206,18 +227,21 @@
                 android:id="@+id/lift"
                 />
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:text="Junction"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="N"
@@ -228,18 +252,21 @@
                 />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="3"
                 android:layout_height="wrap_content"
                 android:text="Rating:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:text="5"
@@ -250,7 +277,9 @@
                 />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -258,7 +287,8 @@
                 android:text="Contact 1:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="20sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="10dp"
                 />
             <TextView
                 android:layout_width="0dp"
@@ -274,7 +304,9 @@
 
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -282,7 +314,8 @@
                 android:text="Contact 2:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="20sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="10dp"
                 />
             <TextView
                 android:layout_width="0dp"
@@ -298,7 +331,9 @@
 
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_marginBottom="15dp"
+            >
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -306,7 +341,8 @@
                 android:text="Email:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="30sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
                 android:layout_width="0dp"
@@ -322,6 +358,7 @@
 
 
         <TableRow
+            android:layout_marginBottom="15dp"
             >
             <TextView
                 android:layout_width="0dp"
@@ -330,7 +367,8 @@
                 android:text="PinCode :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="20sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="15dp"
                 />
             <TextView
                 android:layout_width="0dp"
@@ -345,6 +383,7 @@
         </TableRow>
 
         <TableRow
+            android:layout_marginBottom="15dp"
             >
             <TextView
                 android:layout_width="0dp"
@@ -353,7 +392,9 @@
                 android:text="Address:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="15sp"
-                android:gravity="center"
+                android:gravity="start"
+                android:paddingStart="10dp"
+
                 />
             <TextView
                 android:layout_width="0dp"
@@ -367,7 +408,9 @@
                 />
         </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:layout_marginBottom="15dp"
+                >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="600dp" />

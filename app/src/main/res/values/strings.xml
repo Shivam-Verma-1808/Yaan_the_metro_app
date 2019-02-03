@@ -45,6 +45,7 @@
     <!-- For play_area_bottom_fragment -->
     <!--Explore area-->
     <string name="bottom_fragment_btn1">Know Your Metro</string>
+    <string name="bottom_fragment_btn1_console">Your Metro</string>
     <string name="bottom_fragment_btn2">Map</string>
     <string name="bottom_fragment_btn3">City Attractions</string>
     <!--Fare Area-->
