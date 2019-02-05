@@ -34,4 +34,7 @@
     <color name="tab2_middle_fragment_color">#FFEB3B</color>
     <color name="tab3_middle_fragment_color">#FF5722</color>
 
+    <!--for sign_up_fragment-->
+    <color name="error_message_color">#F44336</color>
+
 </resources>

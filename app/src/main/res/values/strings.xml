@@ -23,6 +23,9 @@
     <string name="set_password_textbox">Set Your Password</string>
     <string name="password_confirmation_textbox">Confirmation</string>
     <string name="set_password_confirmation_textbox">Re_Enter Your Password</string>
+    <string name="password_error">Password mismatch !</string>
+    <string name="blank_field_error">Field left blank !</string>
+    <string name="welcome_new_user_message">Welcome</string>
 
 
     <!-- For Navigation Drawer -->

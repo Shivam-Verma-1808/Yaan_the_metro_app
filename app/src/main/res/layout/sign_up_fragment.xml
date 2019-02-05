@@ -31,6 +31,7 @@
                 android:background="@drawable/custom_text_box_layout"
                 android:hint="@string/First_name"
                 android:layout_margin="16dp"
+                android:id="@+id/new_user_first_name"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -46,6 +47,7 @@
                 android:background="@drawable/custom_text_box_layout"
                 android:hint="@string/Last_name"
                 android:layout_margin="16dp"
+                android:id="@+id/new_user_last_name"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -61,6 +63,7 @@
                 android:background="@drawable/custom_text_box_layout"
                 android:hint="@string/Email_textbox"
                 android:layout_margin="16dp"
+                android:id="@+id/new_user_email"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -88,6 +91,7 @@
                     android:background="@drawable/custom_text_box_layout"
                     android:hint="@string/Phone_textbox"
                     android:layout_margin="16dp"
+                    android:id="@+id/new_user_phone"
                     />
             </LinearLayout>
             <TextView
@@ -97,14 +101,24 @@
                 android:textSize="16sp"
                 android:text="@string/password_textbox"
                 />
-            <EditText
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/set_new_password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent"
+                >
+            <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:background="@drawable/custom_text_box_layout"
                 android:hint="@string/set_password_textbox"
                 android:layout_margin="16dp"
+                android:id="@+id/set_password"
                 />
+            </android.support.design.widget.TextInputLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,6 +133,7 @@
                 android:background="@drawable/custom_text_box_layout"
                 android:hint="@string/set_password_confirmation_textbox"
                 android:layout_margin="16dp"
+                android:id="@+id/re_enter_password"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -128,6 +143,15 @@
                 android:textSize="16sp"
                 android:background="@drawable/custom_button_layout"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/error_message_box"
+                android:textColor="@color/error_message_color"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="500dp"
