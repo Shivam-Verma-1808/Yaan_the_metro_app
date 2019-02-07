@@ -13,26 +13,66 @@
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textSize="30sp"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:text="SRC"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/error_message_color"
             android:layout_marginBottom="16dp"
-            android:id="@+id/src_station_name_text_box"/>
-        <TextView
+            android:id="@+id/error_box"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="DEST"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textSize="30sp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:id="@+id/dest_station_name_text_box"
-            android:layout_marginBottom="16dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:text="SRC"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:id="@+id/src_station_name_text_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="DEST"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:id="@+id/dest_station_name_text_box"
+                android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:text="Rs."/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:gravity="start|center_vertical"
+                android:text="00.00"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="40sp"
+                android:id="@+id/cost_box"/>
+
+        </LinearLayout>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"

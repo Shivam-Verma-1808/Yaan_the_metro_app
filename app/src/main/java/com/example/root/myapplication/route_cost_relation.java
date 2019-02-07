@@ -2,9 +2,12 @@ package com.example.root.myapplication;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "route",foreignKeys = {@ForeignKey(entity = station_entity.class ,parentColumns = "id",childColumns = "src_station_id"),@ForeignKey(entity = station_entity.class,parentColumns = "id",childColumns = "dest_station_id")})
+import static android.arch.persistence.room.ForeignKey.CASCADE;
+
+@Entity(tableName = "route",foreignKeys = {@ForeignKey(entity = station_entity.class ,parentColumns = "id",childColumns = "src_station_id" ,onDelete = CASCADE ,onUpdate = CASCADE),@ForeignKey(entity = station_entity.class,parentColumns = "id",childColumns = "dest_station_id",onDelete = CASCADE ,onUpdate = CASCADE)},indices = {@Index("src_station_id"),@Index("dest_station_id")})
 public class route_cost_relation {
 
     @PrimaryKey(autoGenerate = true)

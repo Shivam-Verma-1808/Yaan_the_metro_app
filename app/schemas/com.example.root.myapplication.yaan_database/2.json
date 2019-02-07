@@ -1,8 +1,8 @@
 {
   "formatVersion": 1,
   "database": {
-    "version": 1,
-    "identityHash": "7cb84de0d43bb23c367b9ae90674b329",
+    "version": 2,
+    "identityHash": "f4ed47a91e0ec0ff34ceb381313b6c98",
     "entities": [
       {
         "tableName": "station",
@@ -110,7 +110,7 @@
       },
       {
         "tableName": "route",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`route_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `src_station_id` INTEGER NOT NULL, `dest_station_id` INTEGER NOT NULL, `cost` REAL NOT NULL, FOREIGN KEY(`src_station_id`) REFERENCES `station`(`id`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`dest_station_id`) REFERENCES `station`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`route_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `src_station_id` INTEGER NOT NULL, `dest_station_id` INTEGER NOT NULL, `cost` REAL NOT NULL, FOREIGN KEY(`src_station_id`) REFERENCES `station`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`dest_station_id`) REFERENCES `station`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "route_id",
@@ -143,29 +143,12 @@
           ],
           "autoGenerate": true
         },
-        "indices": [
-          {
-            "name": "index_route_src_station_id",
-            "unique": false,
-            "columnNames": [
-              "src_station_id"
-            ],
-            "createSql": "CREATE  INDEX `index_route_src_station_id` ON `${TABLE_NAME}` (`src_station_id`)"
-          },
-          {
-            "name": "index_route_dest_station_id",
-            "unique": false,
-            "columnNames": [
-              "dest_station_id"
-            ],
-            "createSql": "CREATE  INDEX `index_route_dest_station_id` ON `${TABLE_NAME}` (`dest_station_id`)"
-          }
-        ],
+        "indices": [],
         "foreignKeys": [
           {
             "table": "station",
-            "onDelete": "CASCADE",
-            "onUpdate": "CASCADE",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
             "columns": [
               "src_station_id"
             ],
@@ -175,8 +158,8 @@
           },
           {
             "table": "station",
-            "onDelete": "CASCADE",
-            "onUpdate": "CASCADE",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
             "columns": [
               "dest_station_id"
             ],
@@ -188,7 +171,7 @@
       },
       {
         "tableName": "route_detail",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `route_id` INTEGER NOT NULL, `between_station` INTEGER NOT NULL, `order` INTEGER NOT NULL, `line_color` INTEGER NOT NULL, FOREIGN KEY(`between_station`) REFERENCES `station`(`id`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`route_id`) REFERENCES `route`(`route_id`) ON UPDATE CASCADE ON DELETE CASCADE , FOREIGN KEY(`line_color`) REFERENCES `color`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `route_id` INTEGER NOT NULL, `between_station` INTEGER NOT NULL, `order` INTEGER NOT NULL, `line_color` INTEGER NOT NULL, FOREIGN KEY(`between_station`) REFERENCES `station`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`route_id`) REFERENCES `route`(`route_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`line_color`) REFERENCES `color`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "id",
@@ -227,37 +210,12 @@
           ],
           "autoGenerate": true
         },
-        "indices": [
-          {
-            "name": "index_route_detail_between_station",
-            "unique": false,
-            "columnNames": [
-              "between_station"
-            ],
-            "createSql": "CREATE  INDEX `index_route_detail_between_station` ON `${TABLE_NAME}` (`between_station`)"
-          },
-          {
-            "name": "index_route_detail_route_id",
-            "unique": false,
-            "columnNames": [
-              "route_id"
-            ],
-            "createSql": "CREATE  INDEX `index_route_detail_route_id` ON `${TABLE_NAME}` (`route_id`)"
-          },
-          {
-            "name": "index_route_detail_line_color",
-            "unique": false,
-            "columnNames": [
-              "line_color"
-            ],
-            "createSql": "CREATE  INDEX `index_route_detail_line_color` ON `${TABLE_NAME}` (`line_color`)"
-          }
-        ],
+        "indices": [],
         "foreignKeys": [
           {
             "table": "station",
-            "onDelete": "CASCADE",
-            "onUpdate": "CASCADE",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
             "columns": [
               "between_station"
             ],
@@ -267,8 +225,8 @@
           },
           {
             "table": "route",
-            "onDelete": "CASCADE",
-            "onUpdate": "CASCADE",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
             "columns": [
               "route_id"
             ],
@@ -278,8 +236,8 @@
           },
           {
             "table": "color",
-            "onDelete": "CASCADE",
-            "onUpdate": "CASCADE",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
             "columns": [
               "line_color"
             ],
@@ -318,7 +276,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"7cb84de0d43bb23c367b9ae90674b329\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"f4ed47a91e0ec0ff34ceb381313b6c98\")"
     ]
   }
 }
