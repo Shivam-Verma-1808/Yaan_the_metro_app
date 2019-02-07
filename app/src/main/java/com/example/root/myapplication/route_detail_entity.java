@@ -4,7 +4,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "route_detail")
+@Entity(tableName = "route_detail",foreignKeys = {@ForeignKey(entity = station_entity.class,parentColumns = "id",childColumns = "between_station"),@ForeignKey(entity = route_cost_relation.class,parentColumns = "route_id",childColumns = "route_id"),@ForeignKey(entity = color_entity.class,parentColumns = "id",childColumns = "line_color")})
 public class route_detail_entity {
 
     @PrimaryKey(autoGenerate = true)

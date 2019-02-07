@@ -3,6 +3,7 @@ package com.example.root.myapplication;
 import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.net.Uri;
@@ -36,6 +37,9 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
 
     List<String> station_names;
 
+    String src_station_name = null;
+    String dest_station_name = null;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,7 +66,11 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
                 // }
                 ////transaction.addToBackStack(null);
                 ////transaction.commit();
-                replaceViewbyFragment(fragment);
+                //////replaceViewbyFragment(fragment);
+                Intent intent = new Intent(getActivity(),popup_info_activity.class);
+                intent.putExtra("src_station",src_station_name);
+                intent.putExtra("dest_station",dest_station_name);
+                startActivity(intent);                                                        //to open a a new popup activity
 
             }
         });
@@ -84,7 +92,8 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
                 // }
                 ////transaction.addToBackStack(null);
                 ////transaction.commit();
-                replaceViewbyFragment(fragment);
+                //////replaceViewbyFragment(fragment);
+                startActivity(new Intent(getActivity(),view_route_on_map_activity.class));
 
             }
         });
@@ -208,11 +217,13 @@ public class tab_1_middle_fragment extends Fragment implements View.OnClickListe
                 {
 
                     search_bar_1_textbox.setText(item.getTitle());
+                    src_station_name = (String) item.getTitle();
                     Toast.makeText(rootView.getContext(), Integer.toString(item.getItemId()),Toast.LENGTH_SHORT).show();
                 }
                 else if(view.getId()==R.id.search_bar_2)
                 {
                     search_bar_2_textbox.setText(item.getTitle());
+                    dest_station_name = (String) item.getTitle();
                     Toast.makeText(rootView.getContext(),Integer.toString(item.getItemId()),Toast.LENGTH_SHORT).show();
                 }
 

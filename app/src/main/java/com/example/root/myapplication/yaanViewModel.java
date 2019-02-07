@@ -19,6 +19,12 @@ public class yaanViewModel extends AndroidViewModel {
     MutableLiveData<String> filter = new MutableLiveData<String>();
     //String station = null;
 
+    private LiveData<get_route_cost_query_result> route_cost;
+    MutableLiveData<route_cost_filter_input> route_cost_filter = new MutableLiveData<route_cost_filter_input>();
+
+    private LiveData<List<get_route_detail_query_result>> route_detail;
+    MutableLiveData<route_detail_filter_input> route_detail_filter = new MutableLiveData<route_detail_filter_input>();
+
     public yaanViewModel(@NonNull Application application) {
         super(application);
 
@@ -28,6 +34,20 @@ public class yaanViewModel extends AndroidViewModel {
             @Override
             public LiveData<station_entity> apply(String input) {
                 return repository.getStation_info(input);
+            }
+        });
+
+        route_cost = Transformations.switchMap(route_cost_filter, new Function<route_cost_filter_input, LiveData<get_route_cost_query_result>>() {
+            @Override
+            public LiveData<get_route_cost_query_result> apply(route_cost_filter_input input) {
+                return repository.getRoute_cost(input);
+            }
+        });
+
+        route_detail = Transformations.switchMap(route_detail_filter, new Function<route_detail_filter_input, LiveData<List<get_route_detail_query_result>>>() {
+            @Override
+            public LiveData<List<get_route_detail_query_result>> apply(route_detail_filter_input input) {
+                return repository.getRoute_detail(input);
             }
         });
 
@@ -60,10 +80,24 @@ public class yaanViewModel extends AndroidViewModel {
         this.set_filter(station_name);
         return station_info;
     }
+    public LiveData<get_route_cost_query_result> getRoute_cost(route_cost_filter_input inputs)
+    {
+        this.set_route_cost_filter(inputs);
+        return route_cost;
+    }
+    public LiveData<List<get_route_detail_query_result>> getRoute_detail(route_detail_filter_input inputs)
+    {
+        this.set_route_detail_filter(inputs);
+        return route_detail;
+    }
 
     public void set_filter(String string)
     {
         filter.setValue(string);
     }
+
+    public void set_route_cost_filter(route_cost_filter_input filter_input){ route_cost_filter.setValue(filter_input); }
+
+    public void set_route_detail_filter(route_detail_filter_input filter_input){ route_detail_filter.setValue(filter_input); }
 
 }

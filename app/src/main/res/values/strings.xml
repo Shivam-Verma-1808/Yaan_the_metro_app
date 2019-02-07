@@ -99,4 +99,7 @@
     <!--For Station Info Activity-->
     <string name="station_info">Station Info</string>
 
+    <!--For View Route on Map Activity-->
+    <string name="view_route_on_map">View Route</string>
+
 </resources>

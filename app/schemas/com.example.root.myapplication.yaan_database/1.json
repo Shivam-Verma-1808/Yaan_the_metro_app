@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "510509a80f363f36f6d2a729710735bc",
+    "identityHash": "f4ed47a91e0ec0ff34ceb381313b6c98",
     "entities": [
       {
         "tableName": "station",
@@ -110,7 +110,7 @@
       },
       {
         "tableName": "route",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`route_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `src_station_id` INTEGER NOT NULL, `dest_station_id` INTEGER NOT NULL, `cost` REAL NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`route_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `src_station_id` INTEGER NOT NULL, `dest_station_id` INTEGER NOT NULL, `cost` REAL NOT NULL, FOREIGN KEY(`src_station_id`) REFERENCES `station`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`dest_station_id`) REFERENCES `station`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "route_id",
@@ -144,11 +144,34 @@
           "autoGenerate": true
         },
         "indices": [],
-        "foreignKeys": []
+        "foreignKeys": [
+          {
+            "table": "station",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "src_station_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "station",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "dest_station_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
       },
       {
         "tableName": "route_detail",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `route_id` INTEGER NOT NULL, `between_station` INTEGER NOT NULL, `order` INTEGER NOT NULL, `line_color` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `route_id` INTEGER NOT NULL, `between_station` INTEGER NOT NULL, `order` INTEGER NOT NULL, `line_color` INTEGER NOT NULL, FOREIGN KEY(`between_station`) REFERENCES `station`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`route_id`) REFERENCES `route`(`route_id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`line_color`) REFERENCES `color`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
         "fields": [
           {
             "fieldPath": "id",
@@ -188,7 +211,41 @@
           "autoGenerate": true
         },
         "indices": [],
-        "foreignKeys": []
+        "foreignKeys": [
+          {
+            "table": "station",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "between_station"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "route",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "route_id"
+            ],
+            "referencedColumns": [
+              "route_id"
+            ]
+          },
+          {
+            "table": "color",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "line_color"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
       },
       {
         "tableName": "color",
@@ -219,7 +276,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"510509a80f363f36f6d2a729710735bc\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"f4ed47a91e0ec0ff34ceb381313b6c98\")"
     ]
   }
 }
