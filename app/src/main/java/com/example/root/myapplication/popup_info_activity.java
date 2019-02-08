@@ -106,11 +106,11 @@ public class popup_info_activity extends AppCompatActivity implements View.OnCli
                 }
             });
         }
-        else if (src_station_name == null)
+        else if ((src_station_name == null)&&(dest_station_name != null))
         {
             error_message_box.setText("source Station not selected");
         }
-        else if(dest_station_name == null)
+        else if((dest_station_name == null)&&(src_station_name != null))
         {
 
             error_message_box.setText("destination Station not selected");
