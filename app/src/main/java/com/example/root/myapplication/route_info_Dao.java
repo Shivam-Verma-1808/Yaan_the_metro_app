@@ -4,7 +4,7 @@ import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
-import android.support.v4.util.Pair;
+//import android.support.v4.util.Pair;
 
 import java.util.List;
 
