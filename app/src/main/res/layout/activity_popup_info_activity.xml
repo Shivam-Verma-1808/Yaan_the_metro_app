@@ -33,24 +33,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textSize="30sp"
+                android:textSize="22sp"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:text="SRC"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:layout_marginBottom="16dp"
-                android:id="@+id/src_station_name_text_box"/>
+                android:id="@+id/src_station_name_text_box"
+                android:ellipsize="end"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="DEST"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textSize="30sp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
+                android:textSize="22sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:id="@+id/dest_station_name_text_box"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"/>
 
             </LinearLayout>
 
@@ -73,6 +75,26 @@
                 android:id="@+id/cost_box"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:background="@color/colorAccent"
+            android:layout_marginBottom="8dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/route_detail_table"
+            android:orientation="vertical"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:background="@color/colorAccent"
+            android:layout_marginBottom="8dp"/>
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
