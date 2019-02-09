@@ -26,9 +26,11 @@
             android:layout_height="match_parent"
             android:text="@string/search_bar_1"
             android:textSize="30sp"
-            android:gravity="center"
+            android:gravity="center|start"
             android:id="@+id/search_bar_1_text_view"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:paddingStart="16dp"
+            android:paddingEnd="2dp"
             />
         <ImageView
             android:layout_width="0dp"
@@ -59,8 +61,10 @@
             android:text="@string/search_bar_2"
             android:textSize="30sp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:gravity="center"
+            android:gravity="center|start"
             android:id="@+id/search_bar_2_text_view"
+            android:paddingStart="16dp"
+            android:paddingEnd="2dp"
             />
         <ImageView
             android:layout_width="0dp"
