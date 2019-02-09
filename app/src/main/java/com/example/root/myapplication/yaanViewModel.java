@@ -25,6 +25,10 @@ public class yaanViewModel extends AndroidViewModel {
     private LiveData<List<get_route_detail_query_result>> route_detail;
     MutableLiveData<route_detail_filter_input> route_detail_filter = new MutableLiveData<route_detail_filter_input>();
 
+    private LiveData<List<get_route_detail_query_result>> route_detail_desc;
+    MutableLiveData<route_detail_filter_input> route_detail_filter_desc = new MutableLiveData<route_detail_filter_input>();     //this can be avoided by using the route_detail_filter but that would lead to run query get_route_detail_asc when ever we only need get_route_detail_desc
+
+
     public yaanViewModel(@NonNull Application application) {
         super(application);
 
@@ -48,6 +52,13 @@ public class yaanViewModel extends AndroidViewModel {
             @Override
             public LiveData<List<get_route_detail_query_result>> apply(route_detail_filter_input input) {
                 return repository.getRoute_detail(input);
+            }
+        });
+
+        route_detail_desc = Transformations.switchMap(route_detail_filter_desc, new Function<route_detail_filter_input, LiveData<List<get_route_detail_query_result>>>() {
+            @Override
+            public LiveData<List<get_route_detail_query_result>> apply(route_detail_filter_input input) {
+                return repository.getRoute_detail_desc(input);
             }
         });
 
@@ -90,6 +101,11 @@ public class yaanViewModel extends AndroidViewModel {
         this.set_route_detail_filter(inputs);
         return route_detail;
     }
+    public LiveData<List<get_route_detail_query_result>> getRoute_detail_desc(route_detail_filter_input inputs)
+    {
+        this.set_route_detail_filter_desc(inputs);
+        return route_detail_desc;
+    }
 
     public void set_filter(String string)
     {
@@ -99,5 +115,7 @@ public class yaanViewModel extends AndroidViewModel {
     public void set_route_cost_filter(route_cost_filter_input filter_input){ route_cost_filter.setValue(filter_input); }
 
     public void set_route_detail_filter(route_detail_filter_input filter_input){ route_detail_filter.setValue(filter_input); }
+
+    public void set_route_detail_filter_desc(route_detail_filter_input filter_input){route_detail_filter_desc.setValue(filter_input);}
 
 }

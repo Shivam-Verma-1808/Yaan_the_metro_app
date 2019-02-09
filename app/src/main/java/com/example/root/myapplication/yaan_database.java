@@ -126,57 +126,79 @@ public abstract class yaan_database extends RoomDatabase {
             routeinfodao.insert_route_cost(new route_cost_relation(6,7,60));                        //21
 
 
-            routeinfodao.insert_route_detail(new route_detail_entity(1,2,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(2,2,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(2,3,2,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(3,4,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(4,5,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(5,5,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(5,6,2,3));
-            routeinfodao.insert_route_detail(new route_detail_entity(6,5,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(6,7,2,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(1,1,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(1,2,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(2,1,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(2,2,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(2,3,3,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(3,1,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(3,4,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(4,1,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(4,5,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(5,1,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(5,5,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(5,6,3,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(6,1,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(6,5,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(6,7,3,3));
 
-            routeinfodao.insert_route_detail(new route_detail_entity(7,3,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(8,1,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(8,4,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(9,1,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(7,2,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(7,3,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(8,2,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(8,1,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(8,4,3,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(9,2,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(9,1,2,1));
             routeinfodao.insert_route_detail(new route_detail_entity(9,5,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(10,1,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(10,5,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(10,6,3,3));
-            routeinfodao.insert_route_detail(new route_detail_entity(11,1,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(11,5,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(11,7,3,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(10,2,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(10,1,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(10,5,3,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(10,6,4,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(11,2,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(11,1,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(11,5,3,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(11,7,4,3));
 
-            routeinfodao.insert_route_detail(new route_detail_entity(12,2,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(12,1,2,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(12,4,3,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(13,2,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(13,1,2,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(13,5,3,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(14,2,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(14,1,2,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(14,5,3,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(14,6,4,3));
-            routeinfodao.insert_route_detail(new route_detail_entity(15,2,1,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(15,1,2,1));
-            routeinfodao.insert_route_detail(new route_detail_entity(15,5,3,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(15,7,4,3));
 
-            routeinfodao.insert_route_detail(new route_detail_entity(16,1,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(16,5,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(17,1,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(17,5,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(17,6,3,3));
-            routeinfodao.insert_route_detail(new route_detail_entity(18,1,1,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(18,5,2,2));
-            routeinfodao.insert_route_detail(new route_detail_entity(18,7,3,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(12,3,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(12,2,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(12,1,3,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(12,4,4,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(13,3,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(13,2,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(13,1,3,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(13,5,4,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(14,3,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(14,2,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(14,1,3,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(14,5,4,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(14,6,5,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(15,3,1,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(15,2,2,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(15,1,3,1));
+            routeinfodao.insert_route_detail(new route_detail_entity(15,5,4,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(15,7,5,3));
 
-            routeinfodao.insert_route_detail(new route_detail_entity(19,6,1,3));
-            routeinfodao.insert_route_detail(new route_detail_entity(20,7,1,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(16,4,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(16,1,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(16,5,3,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(17,4,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(17,1,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(17,5,3,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(17,6,4,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(18,4,1,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(18,1,2,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(18,5,3,2));
+            routeinfodao.insert_route_detail(new route_detail_entity(18,7,4,3));
 
-            routeinfodao.insert_route_detail(new route_detail_entity(21,5,1,3));
-            routeinfodao.insert_route_detail(new route_detail_entity(21,7,2,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(19,5,1,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(19,6,2,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(20,5,1,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(20,7,2,3));
+
+            routeinfodao.insert_route_detail(new route_detail_entity(21,6,1,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(21,5,2,3));
+            routeinfodao.insert_route_detail(new route_detail_entity(21,7,3,3));
 
 
 

@@ -27,4 +27,6 @@ public interface route_info_Dao {
     //@Query("SELECT station.name ,color_name FROM route_detail INNER JOIN color ON line_color=color.id INNER JOIN station WHERE route_id = :route_number ORDER BY route_detail.`order` DESC")
     //LiveData<List<get_route_detail_query_result>> get_route_detail_desc(int route_number,boolean desc);
 
+    @Query("SELECT station.name as station_name,color_name FROM route_detail INNER JOIN color ON route_detail.line_color = color.id INNER JOIN station ON route_detail.between_station=station.id WHERE route_id = :route_number ORDER BY route_detail.`order` DESC")
+    LiveData<List<get_route_detail_query_result>> get_route_detail_desc(int route_number);
 }

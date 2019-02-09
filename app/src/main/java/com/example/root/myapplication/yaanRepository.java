@@ -24,6 +24,9 @@ public class yaanRepository {                                                   
     private LiveData<List<get_route_detail_query_result>> route_detail;
     MutableLiveData<route_detail_filter_input> route_detail_filter = new MutableLiveData<route_detail_filter_input>();
 
+    private LiveData<List<get_route_detail_query_result>> route_detail_desc;
+    MutableLiveData<route_detail_filter_input> route_detail_filter_desc = new MutableLiveData<route_detail_filter_input>();     //this can be avoided by using the route_detail_filter but that would lead to run query get_route_detail_asc when ever we only need get_route_detail_desc
+
     public yaanRepository(Application application)
     {
         yaan_database database = yaan_database.getInstance(application);
@@ -52,6 +55,13 @@ public class yaanRepository {                                                   
                 return route_info_dao.get_route_detail_asc(input.getRoute_id());//
             }
         });
+
+        route_detail_desc = Transformations.switchMap(route_detail_filter_desc, new Function<route_detail_filter_input, LiveData<List<get_route_detail_query_result>>>() {
+            @Override
+            public LiveData<List<get_route_detail_query_result>> apply(route_detail_filter_input input) {
+                return route_info_dao.get_route_detail_desc(input.getRoute_id());
+            }
+        });
     }
 
     public void set_filter(String string)
@@ -62,6 +72,8 @@ public class yaanRepository {                                                   
     public void set_route_cost_filter(route_cost_filter_input filter_input){ route_cost_filter.setValue(filter_input); }
 
     public void set_route_detail_filter(route_detail_filter_input filter_input){ route_detail_filter.setValue(filter_input); }
+
+    public void set_route_detail_filter_desc(route_detail_filter_input filter_input){route_detail_filter_desc.setValue(filter_input);}
 
     public void insert_new_station(station_entity station)
     {
@@ -88,6 +100,12 @@ public class yaanRepository {                                                   
     {
         this.set_route_detail_filter(inputs);
         return route_detail;
+    }
+
+    public LiveData<List<get_route_detail_query_result>> getRoute_detail_desc(route_detail_filter_input inputs)
+    {
+        this.set_route_detail_filter_desc(inputs);
+        return route_detail_desc;
     }
 
     private static class insert_station_AsyncTask extends AsyncTask<station_entity,Void,Void>

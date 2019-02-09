@@ -102,4 +102,11 @@
     <!--For View Route on Map Activity-->
     <string name="view_route_on_map">View Route</string>
 
+    <!--For Popup_info_activity-->
+    <string name="source_Station_not_selected">source Station not selected</string>
+    <string name="destination_Station_not_selected">destination Station not selected</string>
+    <string name="same_scr_dest">Source and destination are choosen to be same</string>
+    <string name="both_unselected">source and destination Station not selected</string>
+    <string name="route_detail_error">route_detail_query_results are null</string>
+
 </resources>
