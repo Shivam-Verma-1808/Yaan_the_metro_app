@@ -108,5 +108,6 @@
     <string name="same_scr_dest">Source and destination are choosen to be same</string>
     <string name="both_unselected">source and destination Station not selected</string>
     <string name="route_detail_error">route_detail_query_results are null</string>
+    <string name="route_cost_error">route_cost is null</string>
 
 </resources>
